@@ -9,6 +9,7 @@ Command is the name of the binary to launch, Windows class name (which can found
 Examples
 ===
 Examples below are shown in the context of an Openbox rc file, but the command themselves should work in any EWMH compliant windows manager.
+```
 <keybind key="W-t">
   <action name="Execute">
     <command>/opt/scripts/snippets/focus.sh -c lxterminal</command>
@@ -19,6 +20,7 @@ Examples below are shown in the context of an Openbox rc file, but the command t
     <command>/opt/scripts/snippets/focus.sh -c firefox -w Navigator</command>
   </action>
 </keybind>
+```
 Dependencies
 ===
 Relies on xprop and wmctrl.
