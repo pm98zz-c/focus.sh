@@ -19,7 +19,7 @@ usage(){
   echo "focus.sh -c <command> [-w <windows class name>]"
   echo "Where :"
   echo "<command>\t\t Command to execute if window is not found. Eg: 'gnome-terminal', '/usr/bin/firefox'"
-  echo "-<windows class name>\t Window 'class name' to use for checking if the window already exists. Default to the same as the -c argument.\nUse -l to get a list of possible values."
+  echo "-<windows class name>\t Window 'class name' to use for checking if the window already exists. Default to the same as the -c argument.\nUse -l to get a list of possible values. Any additional parameters will be passed to the command when executed."
   echo
   echo "focus.sh -l"
   echo "\t Displays the list of 'class names' of the currently opened windows."
@@ -84,8 +84,16 @@ if [ ! $CMD ] || [ "$CMD" = "" ]; then
   exit 1
 fi
 
+# Remove from arguments.
+shift
+shift
+
 if [ ! $WCLASS ] || [ "$WCLASS" = "" ]; then
   WCLASS=$CMD
+else
+  # Remove from arguments.
+  shift
+  shift
 fi
 
 # Ensure we have all our arguments.
@@ -100,6 +108,6 @@ windowToggle
 
 
 # No window found, launch command.
-env "$CMD"
+env $CMD $@
 
 exit 0
