@@ -4,8 +4,16 @@ Tiny script to use in a X11 environment. It focus/unfocus an application's windo
 Typical use is in conjunction with keyboard shortcuts binding to easily switch between frequently used applications.
 Usage
 ===
+```
 focus.sh -c <command> [-w <windows class name>]
-Command is the name of the binary to launch, Windows class name (which can found with xprop -spy) default to command if ommited.
+Where :
+<command>		 Command to execute if window is not found. Eg: 'gnome-terminal', '/usr/bin/firefox'
+-<windows class name>	 Window 'class name' to use for checking if the window already exists. Default to the same as the -c argument.
+Use -l to get a list of possible values.
+
+focus.sh -l
+	 Displays the list of 'class names' of the currently opened windows.
+```
 Examples
 ===
 Examples below are shown in the context of an Openbox rc file, but the command themselves should work in any EWMH compliant windows manager.
