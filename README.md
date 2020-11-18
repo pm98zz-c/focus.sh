@@ -24,7 +24,7 @@ focus.sh -l
 ## Examples
 
 ```
-./focus.sh -c mattermost
+./focus.sh -c /usr/bin/mattermost-desktop -w mattermost
 ./focus.sh -c firefox -w Navigator
 /focus.sh -c /usr/bin/code -w code
 ```
