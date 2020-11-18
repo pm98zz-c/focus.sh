@@ -26,6 +26,7 @@ focus.sh -l
 ```
 ./focus.sh -c mattermost
 ./focus.sh -c firefox -w Navigator
+/focus.sh -c /usr/bin/code -w code
 ```
 
 More examples shown in the context of an Openbox rc file.
