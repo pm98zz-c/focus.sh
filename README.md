@@ -1,6 +1,6 @@
 # focus.sh
 
-Tiny script to use in a X11 environment (or Wayland for most applications).
+Tiny script to use in a X11 environment (both Xorg and Wayland, for most applications).
 
 It does focus/unfocus an application's window if it exists, launch the program if not.
 
