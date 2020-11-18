@@ -1,7 +1,11 @@
 # focus.sh
 
-Tiny script to use in a X11 environment. It focus/unfocus an application's window if it exists, launch the program if not.
-Typical use is in conjunction with keyboard shortcuts binding to easily switch between frequently used applications.
+Tiny script to use in a X11 environment (or Wayland for most applications).
+
+It does focus/unfocus an application's window if it exists, launch the program if not.
+
+Typical use is in conjunction with keyboard shortcuts binding to easily switch between frequently used applications, without launching a new instance if it is already running.
+Eg. Super+C to switch to "Code", Super+F to switch to "Firefox".
 
 ## Usage
 
@@ -15,6 +19,7 @@ Use -l to get a list of possible values.
 focus.sh -l
 	 Displays the list of 'class names' of the currently opened windows.
 ```
+
 
 ## Examples
 
