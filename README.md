@@ -1,9 +1,10 @@
-focus.sh
-===
+# focus.sh
+
 Tiny script to use in a X11 environment. It focus/unfocus an application's window if it exists, launch the program if not.
 Typical use is in conjunction with keyboard shortcuts binding to easily switch between frequently used applications.
-Usage
-===
+
+## Usage
+
 ```
 focus.sh -c <command> [-w <windows class name>]
 Where :
@@ -14,8 +15,9 @@ Use -l to get a list of possible values.
 focus.sh -l
 	 Displays the list of 'class names' of the currently opened windows.
 ```
-Examples
-===
+
+## Examples
+
 Examples below are shown in the context of an Openbox rc file, but the command themselves should work in any EWMH compliant windows manager.
 ```
 <keybind key="W-t">
@@ -29,6 +31,7 @@ Examples below are shown in the context of an Openbox rc file, but the command t
   </action>
 </keybind>
 ```
-Dependencies
-===
+
+## Dependencies
+
 Relies on xprop and wmctrl.
