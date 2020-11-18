@@ -18,7 +18,12 @@ focus.sh -l
 
 ## Examples
 
-Examples below are shown in the context of an Openbox rc file, but the command themselves should work in any EWMH compliant windows manager.
+```
+./focus.sh -c mattermost
+./focus.sh -c firefox -w Navigator
+```
+
+More examples shown in the context of an Openbox rc file.
 ```
 <keybind key="W-t">
   <action name="Execute">
