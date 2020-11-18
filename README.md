@@ -4,7 +4,7 @@ Tiny script to use in a X11 environment (both Xorg and Wayland, for most applica
 
 It does focus/unfocus an application's window if it exists, launch the program if not.
 
-Typical use is in conjunction with keyboard shortcuts binding to easily switch between frequently used applications, without launching a new instance if it is already running.
+Typical use is in conjunction with global keyboard shortcuts binding to easily switch between frequently used applications, without launching a new instance if it is already running.
 Eg. Super+C to switch to "Code", Super+F to switch to "Firefox".
 
 ## Usage
