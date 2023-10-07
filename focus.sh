@@ -1,12 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 # Check for dependencies.
-if [ ! `which xprop &> /dev/null` ]; then
+if ! command -v xprop &> /dev/null ; then
   echo "Could not execute 'xprop'. Ensure it is installed."
   exit 1
 fi
 
-if [ ! `which wmctrl &> /dev/null` ]; then
+if ! command -v wmctrl &> /dev/null ; then
   echo "Could not execute 'wmctrl'. Ensure it is installed."
   exit 1
 fi
@@ -74,6 +74,10 @@ do
       windowsList
       exit 0
     ;;
+    +)
+      usage
+      exit 1
+    ;;
   esac
 done
 
@@ -108,6 +112,6 @@ windowToggle
 
 
 # No window found, launch command.
-env $CMD $@
+env $CMD "$@"
 
 exit 0
